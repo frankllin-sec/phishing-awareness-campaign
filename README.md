@@ -57,13 +57,12 @@ A phishing email that takes an attacker minutes to craft can cause millions of d
 
 ## 🖼️ Awareness Banner
 
-<a href="https://raw.githubusercontent.com/frankllin-sec/phishing-awareness-campaign/main/phising%20alert%20mail.png" target="_blank">
-  <img src="https://raw.githubusercontent.com/frankllin-sec/phishing-awareness-campaign/main/phising%20alert%20mail.png" width="500"/>
+<a href="https://raw.githubusercontent.com/frankllin-sec/phishing-awareness-campaign/blob/main/phising%20alert%20mail.png" target="_blank">
+  <img src="https://raw.githubusercontent.com/frankllin-sec/phishing-awareness-campaign/blob/main/phising%20alert%20mail.png" width="500"/>
 </a>
 
 > 🔍 *Click the image to view full size*
 ---
-
 ---
 
 ## 🔗 Related Projects
