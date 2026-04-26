@@ -3,7 +3,7 @@
 > **Author:** Frankllin | [github.com/frankllin-sec](https://github.com/frankllin-sec)  
 > **Role:** SOC Analyst Student | Blue Team  
 > **Date:** April 2026  
-> **Status:** ✅ Completed
+
 
 ---
 
