@@ -55,17 +55,6 @@ A phishing email that takes an attacker minutes to craft can cause millions of d
 
 ---
 
-## 🔗 Connection to SOC Detection Work
-
-Awareness campaigns complement the technical detection work done in the SOC. When employees are trained to report suspicious emails, analysts can investigate proactively using tools like Splunk before an attack succeeds.
-
-```spl
-index=email sourcetype=mail_logs
-| search subject="*urgent*" OR subject="*password*" OR subject="*verify*"
-| stats count by sender_domain, subject, recipient
-| where count > 5
-| sort -count
-```
 ## 🖼️ Awareness Banner
 
 <a href="https://raw.githubusercontent.com/frankllin-sec/phishing-awareness-campaign/main/phising%20alert%20mail.png" target="_blank">
