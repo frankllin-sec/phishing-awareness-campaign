@@ -1,20 +1,16 @@
-# 🛡️ Phishing Awareness Campaign — Security Awareness Project
+# 🛡️ Phishing Awareness Campaign
 
 > **Author:** Frankllin | [github.com/frankllin-sec](https://github.com/frankllin-sec)  
 > **Role:** SOC Analyst Student | Blue Team  
-> **Date:** April 2026  
-
-
----
-
-## 📌 Project Overview
-
-This project simulates a real-world **Security Awareness Campaign** focused on phishing attack prevention, created as part of my SOC Analyst training. As a SOC Analyst, one of the key responsibilities is not only detecting threats but also **educating employees** to recognize and avoid social engineering attacks before they become incidents.
-
-This campaign was created as if I were a SOC Analyst sending an official internal security awareness communication to all company employees.
+> **Date:** April 2026
 
 ---
 
+## 📌 About This Project
+
+This project simulates a real-world **Security Awareness Campaign** created as part of my SOC Analyst training. The goal was to produce an internal communication piece that a SOC team would realistically distribute to company employees to reduce the risk of phishing attacks.
+
+---
 ## 🎯 Objective
 
 > **"The best firewall is an educated employee."**
@@ -26,116 +22,43 @@ The goal of this project was to:
 - Provide clear and actionable steps for employees to follow
 - Demonstrate real SOC Analyst skills beyond just technical detection
 
+## 🎯 Why This Matters
+
+Phishing is responsible for **91% of all cyberattacks**. Despite all the technical controls a SOC team deploys  firewalls, EDR, SIEM  a single untrained employee clicking a malicious link can bypass all of them in seconds.
+
+This is why **employee awareness is considered a critical layer of defense**. A SOC Analyst who can not only detect threats but also educate users is significantly more effective at protecting an organization.
+
+When employees know how to recognize phishing:
+- They become an active line of defense instead of a vulnerability
+- The number of successful phishing attacks drops significantly
+- The SOC team receives more proactive reports instead of reacting after damage is done
+- The overall security posture of the company improves
+
 ---
 
-## 🧠 Why This Matters
+## 🧠 Why Employees Are The Target
 
-Phishing is the **#1 initial attack vector** in cybersecurity. Understanding this from a SOC perspective means:
+Attackers target employees because humans are easier to manipulate than systems. Social engineering exploits trust, urgency and fear — emotions that bypass logical thinking. Most employees have no cybersecurity training, which makes them the weakest link in any organization's security chain.
+
+A phishing email that takes an attacker minutes to craft can cause millions of dollars in damage if one employee clicks it. This is why awareness campaigns are a standard practice in every serious Security Operations Center.
+
+---
+
+## 📊 The Numbers Behind The Threat
 
 | Statistic | Data |
 |---|---|
-| % of breaches starting with phishing | **91%** |
-| Phishing emails sent daily worldwide | **3.4 Billion** |
+| Cyberattacks starting with phishing | **91%** |
+| Phishing emails sent daily | **3.4 Billion** |
 | Average cost of a phishing breach | **$4.9 Million** |
-| Time to detect a phishing breach | **197 days average** |
-
-A SOC Analyst who understands phishing from both a **technical detection** perspective AND a **user education** perspective is significantly more valuable to any organization.
+| Average time to detect a breach | **197 days** |
 
 ---
 
-## 📋 What Was Created
+## 🔗 Connection to SOC Detection Work
 
-### Security Awareness Banner
-A professional corporate-style security awareness poster designed to be distributed to all company employees via:
-- Internal email blast
-- Company intranet / internal portal
-- Slack / Microsoft Teams channel
-- Printed and posted in office common areas
+Awareness campaigns complement the technical detection work done in the SOC. When employees are trained to report suspicious emails, analysts can investigate proactively using tools like Splunk before an attack succeeds.
 
-### Banner Content Covers:
-- ✅ How to identify a phishing email
-- ✅ 8 red flags employees must recognize
-- ✅ Real phishing email example with annotations
-- ✅ What to do if you clicked a suspicious link
-- ✅ How to report suspicious emails to the SOC team
-- ✅ Key statistics to create urgency and awareness
-
----
-
-## 🔍 Red Flags Covered in the Banner
-
-### ❌ What to AVOID:
-
-**1. Suspicious Sender Address**
-Always verify the full email address — not just the display name. Attackers use spoofed domains like `support@paypa1.com` or `hr@company-secure.net`
-
-**2. Urgent or Threatening Language**
-Phrases like *"Your account will be suspended in 24 hours"* are classic manipulation tactics designed to bypass rational thinking.
-
-**3. Unexpected Attachments**
-Never open `.exe`, `.zip`, `.docm` files from unknown senders. Even PDF files can contain malicious macros.
-
-**4. Suspicious or Misspelled Links**
-Hover over links before clicking. Watch for: `arnazon.com`, `paypa1.com`, `micros0ft.com` or unusually long URLs.
-
-### ✅ What to DO:
-
-**5. Verify the Sender Directly**
-If you receive an unexpected request claiming to be from IT or your CEO — call them directly before taking action.
-
-**6. Check Links Before Clicking**
-Hover your mouse over any link to preview the real destination URL at the bottom of your browser.
-
-**7. Report Suspicious Emails**
-Forward suspicious emails to the IT Security team immediately. Do not delete them — they are evidence.
-
-**8. Never Enter Credentials on Unknown Sites**
-Legitimate companies will NEVER ask for your password via email.
-
----
-
-## 📧 Real Phishing Email Example
-
-The banner includes an annotated example of a real phishing email showing:
-
-```
-FROM:    IT Support <it-support@c0mpany-help.net>  ⚠️ FAKE DOMAIN
-SUBJECT: ⚠️ URGENT: Your password expires today    ⚠️ URGENCY TACTIC
-
-BODY: Dear Employee,
-Your corporate account will be deactivated in 24 hours.
-Click here to verify your credentials immediately...
-
-LINK: http://company-secure-login.suspicious-domain.net/verify
-      ⚠️ NOT a company domain — PHISHING LINK
-```
-
-**Annotations highlight:**
-- Fake sender domain with number substitution (`c0mpany` vs `company`)
-- Urgency language creating panic
-- Suspicious link with fake domain
-- Generic greeting instead of employee name
-
----
-
-## 🆘 Incident Response — If You Clicked
-
-The banner provides clear 4-step guidance for employees who accidentally clicked:
-
-```
-STEP 1 → Disconnect from network immediately
-STEP 2 → Do NOT enter any credentials on the page
-STEP 3 → Contact IT Security team immediately
-STEP 4 → Change your passwords from a safe device
-```
-
----
-
-## 🔗 Connection to SOC Work
-
-This campaign directly connects to the technical SOC work of detecting phishing:
-
-### Splunk Detection Query — Phishing Indicators
 ```spl
 index=email sourcetype=mail_logs
 | search subject="*urgent*" OR subject="*password*" OR subject="*verify*"
@@ -144,70 +67,17 @@ index=email sourcetype=mail_logs
 | sort -count
 ```
 
-### What a SOC Analyst Looks for in Email Logs:
-- High volume of emails with urgent subject lines
-- Emails from external domains impersonating internal addresses
-- Emails containing links to newly registered domains
-- Attachments with suspicious file extensions
-- EventCode **4625** spikes after bulk phishing campaigns
-
 ---
 
-## 🛠️ Tools and Skills Demonstrated
-
-| Skill | Application |
-|---|---|
-| **Security Awareness** | Created professional employee-facing content |
-| **Phishing Analysis** | Deep understanding of phishing tactics and indicators |
-| **SOC Communication** | Translating technical threats into user-friendly language |
-| **Incident Response** | Clear employee guidance for post-click scenarios |
-| **Splunk SPL** | Detection queries for email-based threats |
-| **Threat Intelligence** | Real statistics and attack patterns |
-
 ---
-
-## 📁 Project Structure
-
-```
-phishing-awareness-campaign/
-│
-├── README.md                          ← This file
-├── awareness-banner/
-│   └── phishing-awareness-banner.png  ← The awareness banner image
-├── splunk-queries/
-│   └── phishing-detection.spl         ← SPL queries for detection
-└── docs/
-    └── phishing-indicators-ioc.md     ← IOC reference document
-```
-
----
-
-## 📚 What I Learned
-
-Working on this project reinforced several key SOC Analyst concepts:
-
-1. **Phishing is the most common attack vector** — understanding it deeply from both attacker and defender perspective is essential
-2. **Employee education reduces SOC workload** — when users report suspicious emails, analysts can investigate proactively
-3. **Clear communication is a SOC skill** — translating technical threats into actionable guidance for non-technical users
-4. **Awareness campaigns complement technical controls** — no firewall can stop a user who willingly enters credentials on a fake site
-
----
-
-This project is part of my ongoing cybersecurity training:
 
 ## 🔗 Related Projects
 
 | Project | Description | Link |
 |---|---|---|
-| SOC Phishing Investigation | Hands-on phishing alert investigation using TryHackMe SOC Simulator | [View Project](https://github.com/frankllin-sec/Soc-phishing-investigation) |
-| Threat IP Investigation | Suspicious IP analysis using OSINT tools | [View Project](https://github.com/frankllin-sec/Project-2---ip-investigation-) |
-| Cybersecurity Journey | Full documentation of my SOC Analyst learning path | [View Journey](https://github.com/frankllin-sec/Mycybersecurity-journey) |
-
----
-
-## ⚠️ Disclaimer
-
-This project was created purely for **educational and portfolio purposes** as part of SOC Analyst training. The phishing email example shown is a simulation created to demonstrate attack patterns. No real phishing attacks were conducted.
+| SOC Phishing Investigation | Hands-on phishing alert investigation | [View Project](https://github.com/frankllin-sec/Soc-phishing-investigation) |
+| Threat IP Investigation | Suspicious IP analysis using OSINT | [View Project](https://github.com/frankllin-sec/Project-2---ip-investigation-) |
+| Cybersecurity Journey | Full SOC Analyst learning path | [View Journey](https://github.com/frankllin-sec/Mycybersecurity-journey) |
 
 ---
 
