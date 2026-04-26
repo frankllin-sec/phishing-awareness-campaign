@@ -24,7 +24,7 @@ The goal of this project was to:
 
 ## 🎯 Why This Matters
 
-Phishing is responsible for **91% of all cyberattacks**. Despite all the technical controls a SOC team deploys  firewalls, EDR, SIEM  a single untrained employee clicking a malicious link can bypass all of them in seconds.
+Phishing is responsible for **91% of all cyberattacks**. A single untrained employee clicking a malicious link can bypass all of them in seconds.
 
 This is why **employee awareness is considered a critical layer of defense**. A SOC Analyst who can not only detect threats but also educate users is significantly more effective at protecting an organization.
 
