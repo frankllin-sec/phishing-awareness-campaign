@@ -38,7 +38,7 @@ When employees know how to recognize phishing:
 
 ## 🧠 Why Employees Are The Target
 
-Attackers target employees because humans are easier to manipulate than systems. Social engineering exploits trust, urgency and fear — emotions that bypass logical thinking. Most employees have no cybersecurity training, which makes them the weakest link in any organization's security chain.
+Attackers target employees because humans are easier to manipulate than systems. Social engineering exploits trust, urgency, and fear, emotions that bypass logical thinking. Most employees have no cybersecurity training, which makes them the weakest link in any organization's security chain.
 
 A phishing email that takes an attacker minutes to craft can cause millions of dollars in damage if one employee clicks it. This is why awareness campaigns are a standard practice in every serious Security Operations Center.
 
@@ -68,7 +68,7 @@ A phishing email that takes an attacker minutes to craft can cause millions of d
 | Project | Description | Link |
 |---|---|---|
 | SOC Phishing Investigation | Hands-on phishing alert investigation | [View Project](https://github.com/frankllin-sec/Soc-phishing-investigation) |
-| Threat IP Investigation | Suspicious IP analysis using OSINT | [View Project](https://github.com/frankllin-sec/Project-2---ip-investigation-) |
+| Threat IP Investigation | Suspicious IP analysis using OSINT | [View Project](https://github.com/frankllin-sec/Ip-investigation-lab) |
 | Cybersecurity Journey | Full SOC Analyst learning path | [View Journey](https://github.com/frankllin-sec/Mycybersecurity-journey) |
 
 ---
